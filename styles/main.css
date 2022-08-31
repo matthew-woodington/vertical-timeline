@@ -12,9 +12,6 @@ html {
 }
 
 body {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     padding: 100px;
     background-color: #A9A9A9;
 }
@@ -31,12 +28,24 @@ li {
 }
 
 li:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .timeline {
     margin: 0 auto;
     position: relative;
+    max-width: 1000px;
 }
 
 .timeline:after {
@@ -50,20 +59,19 @@ li:not(:last-child) {
     margin-left: -3px;
 }
 
-.container-left {
+.timeline-event {
     position: relative;
     width: 45%;
-    left: 0;
-    margin-right: 10px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-.container-right {
+.timeline-event:nth-child(even) {
     position: relative;
     width: 45%;
     left: 55%;
 }
 
-.container-left:after {
+.timeline-event:nth-child(odd):after {
     content: " ";
     width: 0;
     height: 0;
@@ -76,7 +84,17 @@ li:not(:last-child) {
     top: 20%;
   }
 
-  .container-right:before {
+  .timeline-event:nth-child(odd):before {
+    content: " ";
+    width: 100px;
+    height: 100px;
+    background-color: #EB515C;
+    border-radius: 50%;
+    top: 0;
+    right: -20;
+  }
+
+.timeline-event:nth-child(even):before {
     content: " ";
     width: 0;
     height: 0;
@@ -87,4 +105,57 @@ li:not(:last-child) {
     position: absolute;
     right: 100%;
     top: 20%;
-  }
+}
+
+.date {
+    background-color: #EB515C;
+    padding: 10px;
+    color: #F5F5F5;
+    font-weight: 600;
+    z-index: 20;
+}
+
+.timeline-event:nth-child(odd) .date {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+
+.timeline-event:nth-child(even) .date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.more-button {
+    border-style: none;
+    background-color: #296088;
+    color: #F5F5F5;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.bordered-paragraph {
+    border-left: 4px solid #296088;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+.timeline-img-header {
+    background-image: url(../images/timeline-img.jpg);
+    background-size: cover;
+    background-clip: border-box;
+    height: 150px;
+    position: relative;
+    margin: -20;
+}
+
+.timeline-img-header h1 {
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    color: #F5F5F5;
+}
