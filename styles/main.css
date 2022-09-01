@@ -21,6 +21,16 @@ h1 {
     font-weight: 600;
 }
 
+h2 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.timeline-event:nth-child(even) h1 {
+    margin-top: 30px;
+}
+
 p {
     font-size: 15px;
     font-weight: 400;
@@ -176,10 +186,10 @@ i {
     background-color: #1d4561;
 }
 
-.bordered-paragraph {
+.bordered-quote {
     border-left: 4px solid #296088;
-    margin-left: 10px;
-    padding-left: 15px;
+    padding-left: 20px;
+    margin: 16px 30px;
 }
 
 .timeline-event img {
@@ -197,7 +207,7 @@ i {
     position: relative;
 }
 
-.timeline-img-header h1 {
+.timeline-img-header h2 {
     position: absolute;
     bottom: 5px;
     color: #F5F5F5;
