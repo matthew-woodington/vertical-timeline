@@ -172,6 +172,10 @@ i {
     padding: 8px 15px;
 }
 
+.more-button:hover {
+    background-color: #1d4561;
+}
+
 .bordered-paragraph {
     border-left: 4px solid #296088;
     margin-left: 10px;
